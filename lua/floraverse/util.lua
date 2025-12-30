@@ -58,13 +58,16 @@ function M.invert(color)
     end
   elseif type(color) == "string" then
     local hsluv = require("floraverse.hsluv")
-    if color ~= "NONE" then
+    -- Only process valid hex colors
+    if color ~= "NONE" and color ~= "" and color and color:match("^#%x%x%x%x%x%x$") then
       local hsl = hsluv.hex_to_hsluv(color)
-      hsl[3] = 100 - hsl[3]
-      if hsl[3] < 40 then
-        hsl[3] = hsl[3] + (100 - hsl[3]) * M.day_brightness
+      if hsl then
+        hsl[3] = 100 - hsl[3]
+        if hsl[3] < 40 then
+          hsl[3] = hsl[3] + (100 - hsl[3]) * (M.day_brightness or 0.3)
+        end
+        return hsluv.hsluv_to_hex(hsl)
       end
-      return hsluv.hsluv_to_hex(hsl)
     end
   end
   return color

@@ -119,6 +119,20 @@ require('lualine').setup {
 
 Plugin support is automatically enabled when using lazy.nvim, or you can manually control which plugins to enable in the configuration.
 
+## Extras
+
+Floraverse can also generate theme files for a variety of other applications. These generated files can be found in the `extras/` directory of the plugin repository.
+
+To use them, copy the contents of the relevant file into your application's configuration.
+
+Supported applications:
+- [Btop](https://github.com/aristocratos/btop) - Resource monitor
+- [eza](https://eza.rocks) - Modern `ls` replacement
+- [Fish](https://fishshell.com/docs/current/index.html) - Friendly interactive shell
+- [Ghostty](https://github.com/ghostty-org/ghostty) - GPU-accelerated terminal emulator
+- [Lazygit](https://github.com/jesseduffield/lazygit) - Terminal UI for git
+- [Tmux](https://github.com/tmux/tmux/wiki) - Terminal multiplexer
+
 ## Features
 
 - ✅ Complete UI highlighting for Neovim
