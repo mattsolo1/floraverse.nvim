@@ -1,14 +1,14 @@
 ---@type Palette
 return {
   -- Base UI Colors (softer, less contrast)
-  bg = "#0f0d18",
+  bg = "#0a0810",
   fg = "#c8c0a7",
   fg_dark = "#b4ad97",
   comment = "#5a5278",
 
   -- UI Accents
-  bg_dark = "#0a0810",
-  bg_highlight = "#16141f",
+  bg_dark = "#06050a",
+  bg_highlight = "#12101a",
   bg_visual = "#4d456b",
   fg_gutter = "#444059",
   border = "#4d456b",

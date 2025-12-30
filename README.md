@@ -125,6 +125,27 @@ require('lualine').setup {
 
 Floraverse can also generate theme files for a variety of other applications. These generated files can be found in the `extras/` directory of the plugin repository.
 
+### Quick Install
+
+Install themes to your `~/.config` directory for a specific style:
+
+```bash
+# From the plugin directory
+./scripts/install_floraverse_extras.sh main
+
+# Or choose a different style
+./scripts/install_floraverse_extras.sh midnight
+./scripts/install_floraverse_extras.sh twilight
+./scripts/install_floraverse_extras.sh day
+./scripts/install_floraverse_extras.sh dawn
+```
+
+The script will automatically detect installed applications and copy the appropriate theme files.
+
+### Manual Installation
+
+You can also manually copy theme files from the `extras/` directory:
+
 | Tool                                                                                                  | Extra                                              |
 | ----------------------------------------------------------------------------------------------------- | -------------------------------------------------- |
 | [Btop++](https://github.com/aristocratos/btop)                                                        | [extras/btop](extras/btop)                         |

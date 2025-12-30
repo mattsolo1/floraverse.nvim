@@ -1,14 +1,14 @@
 ---@type Palette
 return {
   -- Base UI Colors
-  bg = "#0e0d15",
+  bg = "#0a0810",
   fg = "#dbd1b9",
   fg_dark = "#f3e0b8", -- From palette 7, good for muted text
   comment = "#4c3866", -- From palette 8
 
   -- UI Accents & Variations
-  bg_dark = "#08002e", -- From palette 0
-  bg_highlight = "#1c1b22", -- A manually derived lighter shade of bg
+  bg_dark = "#06050a", -- From palette 0
+  bg_highlight = "#12101a", -- A manually derived lighter shade of bg
   bg_visual = "#4c3866", -- Using palette 8 for visual selection, slightly transparent
   fg_gutter = "#3a3842", -- A manually derived muted foreground
   border = "#4c3866", -- Using palette 8 for borders
