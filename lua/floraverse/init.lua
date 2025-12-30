@@ -8,7 +8,8 @@ M.styles = {}
 function M.load(opts)
   opts = require("floraverse.config").extend(opts)
   local bg = vim.o.background
-  local style_bg = opts.style == "day" and "light" or "dark"
+  local light_styles = { day = true, dawn = true }
+  local style_bg = light_styles[opts.style] and "light" or "dark"
 
   if bg ~= style_bg then
     if vim.g.colors_name == "floraverse-" .. opts.style then
