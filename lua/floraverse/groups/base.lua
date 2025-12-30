@@ -82,6 +82,9 @@ function M.get(c, opts)
     WarningMsg     = { fg = c.warning },
     WildMenu       = { bg = c.bg_visual },
     WinSeparator   = { fg = c.border, bold = true },
+    NormalFloat    = { fg = c.fg_float, bg = c.bg_float },
+    FloatBorder    = { fg = c.border, bg = c.bg_float },
+    FloatTitle     = { fg = c.fg_float, bg = c.bg_float, bold = true },
 
     -- LSP
     LspReferenceText  = { bg = c.bg_highlight },
