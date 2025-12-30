@@ -36,7 +36,6 @@ install_theme() {
   local app=$1
   local src_file=$2
   local dest_file=$3
-  local create_backup=${4:-true}
 
   if [[ ! -f "$src_file" ]]; then
     echo -e "${YELLOW}⚠ Skipping $app: source file not found${NC}"
@@ -45,12 +44,6 @@ install_theme() {
 
   # Create destination directory if needed
   mkdir -p "$(dirname "$dest_file")"
-
-  # Backup existing file
-  if [[ -f "$dest_file" ]] && [[ "$create_backup" == "true" ]]; then
-    cp "$dest_file" "${dest_file}.backup.$(date +%Y%m%d_%H%M%S)"
-    echo -e "${YELLOW}  Backed up existing file${NC}"
-  fi
 
   # Install the theme
   cp "$src_file" "$dest_file"
