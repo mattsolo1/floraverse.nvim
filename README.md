@@ -36,8 +36,12 @@ vim.cmd([[colorscheme floraverse]])
 ```
 
 ```vim
-" There is also a colorscheme for the day style.
-colorscheme floraverse-day
+" There are multiple styles available:
+colorscheme floraverse        -- The default dark theme
+colorscheme floraverse-midnight -- A darker variant
+colorscheme floraverse-twilight -- A softer dark variant
+colorscheme floraverse-day      -- A light theme
+colorscheme floraverse-dawn     -- A softer light theme
 ```
 
 You can also set the background to automatically switch between styles.
@@ -50,7 +54,7 @@ vim.o.background = "dark" -- floraverse (main)
 
 ```lua
 require("floraverse").setup({
-  style = "main", -- The default style ("main" or "day")
+  style = "main", -- "main", "midnight", "twilight", "day", "dawn"
   light_style = "day", -- The theme used when background is set to light
   transparent = false, -- Enable this to disable setting the background color
   terminal_colors = true, -- Configure the colors used when opening a `:terminal`
@@ -106,8 +110,9 @@ To use the lualine theme, set it in your lualine config:
 ```lua
 require('lualine').setup {
   options = {
+    -- Also available: floraverse-midnight, floraverse-twilight,
+    -- floraverse-day, floraverse-dawn
     theme = 'floraverse'
-    -- or 'floraverse-day'
   }
 }
 ```

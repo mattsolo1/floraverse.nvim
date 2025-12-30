@@ -6,6 +6,9 @@ local M = {}
 M.styles = {
   main = require("floraverse.colors.main"),
   day = require("floraverse.colors.day"),
+  midnight = require("floraverse.colors.midnight"),
+  twilight = require("floraverse.colors.twilight"),
+  dawn = require("floraverse.colors.dawn"),
 }
 
 ---@param opts? floraverse.Config
