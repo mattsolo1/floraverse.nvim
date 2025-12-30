@@ -1,6 +1,8 @@
 # floraverse.nvim
 
-A dark, vibrant Neovim colorscheme inspired by natural flora and night gardens.
+Neovim theme inspired by <https://github.com/mbadolato/iTerm2-Color-Schemes/blob/master/schemes/Floraverse.itermcolors>.
+
+Project layout/code inspired by [folke/tokyonight](https://github.com/folke/tokyonight.nvim).
 
 ## Installation
 
