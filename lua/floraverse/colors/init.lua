@@ -44,6 +44,8 @@ function M.setup(opts)
   colors.bg_float = opts.styles.floats == "transparent" and colors.none
     or opts.styles.floats == "dark" and colors.bg_dark
     or colors.bg
+  colors.bg_popup = colors.bg_dark
+  colors.bg_statusline = colors.bg_dark
 
   colors.fg_sidebar = colors.fg_dark
   colors.fg_float = colors.fg

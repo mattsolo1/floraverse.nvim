@@ -20,7 +20,10 @@ set -g status-left-style "none"
 set -g status-right-style "none"
 
 set -g status-left "#[fg=#0e0d15,bg=#40a4cf,bold] #S #[fg=#40a4cf,bg=#08002e,nobold,nounderscore,noitalics]"
-set -g status-right "#[fg=#3a3842,bg=#08002e] #{prefix_highlight} #[fg=#40a4cf,bg=#3a3842] %Y-%m-%d  %I:%M %p #[fg=#0e0d15,bg=#40a4cf,bold] #h "
+set -g status-right "#[fg=#08002e,bg=#08002e,nobold,nounderscore,noitalics]#[fg=#40a4cf,bg=#08002e] #{prefix_highlight} #[fg=#3a3842,bg=#08002e,nobold,nounderscore,noitalics]#[fg=#40a4cf,bg=#3a3842] %Y-%m-%d  %I:%M %p #[fg=#40a4cf,bg=#3a3842,nobold,nounderscore,noitalics]#[fg=#0e0d15,bg=#40a4cf,bold] #h "
+if-shell '[ "$(tmux show-option -gqv "clock-mode-style")" == "24" ]' {
+  set -g status-right "#[fg=#08002e,bg=#08002e,nobold,nounderscore,noitalics]#[fg=#40a4cf,bg=#08002e] #{prefix_highlight} #[fg=#3a3842,bg=#08002e,nobold,nounderscore,noitalics]#[fg=#40a4cf,bg=#3a3842] %Y-%m-%d  %H:%M #[fg=#40a4cf,bg=#3a3842,nobold,nounderscore,noitalics]#[fg=#0e0d15,bg=#40a4cf,bold] #h "
+}
 
 setw -g window-status-activity-style "underscore,fg=#f3e0b8,bg=#08002e"
 setw -g window-status-separator ""

@@ -7,6 +7,9 @@ M.plugins = {
   ["snacks.nvim"] = "snacks",
   ["hop.nvim"] = "hop",
   ["trouble.nvim"] = "trouble",
+  ["telescope.nvim"] = "telescope",
+  ["nvim-cmp"] = "cmp",
+  ["which-key.nvim"] = "which-key",
 }
 
 function M.get_group(name)
