@@ -2,16 +2,22 @@ local Util = require("floraverse.util")
 
 local M = {}
 
----@type table<string, Palette>
+---@type table<string, Palette|fun(opts:floraverse.Config):Palette>
 M.styles = {
   main = require("floraverse.colors.main"),
+  day = require("floraverse.colors.day"),
 }
 
 ---@param opts? floraverse.Config
 function M.setup(opts)
   opts = require("floraverse.config").extend(opts)
 
+  Util.day_brightness = opts.day_brightness
+
   local palette = M.styles[opts.style]
+  if type(palette) == "function" then
+    palette = palette(opts) ---@as Palette
+  end
 
   ---@class ColorScheme: Palette
   local colors = palette

@@ -35,23 +35,11 @@ require("floraverse").setup()
 vim.cmd([[colorscheme floraverse]])
 ```
 
-```vim
-" There is also a colorscheme for the day style.
-colorscheme floraverse-day
-```
-
-You can also set the background to automatically switch between styles.
-```lua
-vim.o.background = "light" -- floraverse-day
-vim.o.background = "dark" -- floraverse (main)
-```
-
 ## Configuration
 
 ```lua
 require("floraverse").setup({
-  style = "main", -- The default style ("main" or "day")
-  light_style = "day", -- The theme used when background is set to light
+  style = "main", -- The default style
   transparent = false, -- Enable this to disable setting the background color
   terminal_colors = true, -- Configure the colors used when opening a `:terminal`
   styles = {
@@ -62,8 +50,6 @@ require("floraverse").setup({
     sidebars = "dark", -- style for sidebars, "dark", "transparent" or "normal"
     floats = "dark", -- style for floating windows
   },
-
-  day_brightness = 0.3, -- Adjusts the brightness of the colors of the **Day** style. Number between 0 and 1, from dull to vibrant colors
 
   plugins = {
     all = false, -- enable all plugins (default is true if lazy.nvim not detected)
@@ -92,38 +78,30 @@ require("floraverse").setup({
 
 Floraverse has native support for the following plugins:
 
-- [gitsigns.nvim](https://github.com/lewis6991/gitsigns.nvim) - Git decorations
-- [neo-tree.nvim](https://github.com/nvim-neo-tree/neo-tree.nvim) - File explorer
-- [blink.cmp](https://github.com/Saghen/blink.cmp) - Completion engine
-- [trouble.nvim](https://github.com/folke/trouble.nvim) - Diagnostics list
-- [snacks.nvim](https://github.com/folke/snacks.nvim) - Collection of QoL plugins
-- [hop.nvim](https://github.com/phaazon/hop.nvim) - Jump to any location
-- [lualine.nvim](https://github.com/nvim-lualine/lualine.nvim) - Statusline (via theme)
-
-### [Lualine](https://github.com/nvim-lualine/lualine.nvim)
-
-To use the lualine theme, set it in your lualine config:
-```lua
-require('lualine').setup {
-  options = {
-    theme = 'floraverse'
-    -- or 'floraverse-day'
-  }
-}
-```
+- [telescope.nvim](https://github.com/nvim-telescope/telescope.nvim)
+- [gitsigns.nvim](https://github.com/lewis6991/gitsigns.nvim)
+- [neo-tree.nvim](https://github.com/nvim-neo-tree/neo-tree.nvim)
+- [nvim-cmp](https://github.com/hrsh7th/nvim-cmp)
 
 Plugin support is automatically enabled when using lazy.nvim, or you can manually control which plugins to enable in the configuration.
 
-## Features
+## Development Status
 
-- ✅ Complete UI highlighting for Neovim
-- ✅ Full Treesitter syntax highlighting support
-- ✅ LSP integration (diagnostics, references)
-- ✅ Native plugin support (Telescope, GitSigns, Neo-tree, nvim-cmp)
-- ✅ Configurable styles for comments, keywords, functions, and variables
-- ✅ Terminal color support
-- ✅ Transparent background option
-- ✅ Customizable via `on_colors` and `on_highlights` callbacks
+This colorscheme is currently in Phase 1 of development. The foundation is complete with:
+-  Core plugin structure
+-  Color palette definitions
+-  Configuration system
+-  Terminal color support
+
+Coming in Phase 2:
+- Highlight groups for Neovim UI
+- Treesitter syntax highlighting
+- LSP integration
+
+Coming in Phase 3:
+- Plugin integrations
+- Lualine theme
+- Additional variants
 
 ## License
 

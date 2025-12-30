@@ -5,6 +5,7 @@ local M = {}
 ---@field on_highlights fun(highlights: floraverse.Highlights, colors: ColorScheme)
 M.defaults = {
   style = "main", -- The default style
+  light_style = "day", -- The theme used when background is set to light
   transparent = false, -- Enable this to disable setting the background color
   terminal_colors = true, -- Configure the colors used when opening a `:terminal` in Neovim
   styles = {
@@ -15,6 +16,8 @@ M.defaults = {
     sidebars = "dark",
     floats = "dark",
   },
+
+  day_brightness = 0.3, -- Adjusts the brightness of the colors of the **Day** style. Number between 0 and 1, from dull to vibrant colors
 
   plugins = {
     all = package.loaded.lazy == nil,
