@@ -1,7 +1,7 @@
 # Theme: floraverse_day
 # By: solom4
 
-theme[main_bg]="#f4f3f6"
+theme[main_bg]="#f8f8f9"
 theme[main_fg]="#666155"
 
 # Title color for boxes
@@ -11,7 +11,7 @@ theme[title]="#666155"
 theme[hi_fg]="#955311"
 
 # Selected item in processes box
-theme[selected_bg]="#e2e2e5"
+theme[selected_bg]="#f0f0f3"
 theme[selected_fg]="#3a7d67"
 
 # Misc colors for processes box including mini cpu graphs, details memory graph and details status text

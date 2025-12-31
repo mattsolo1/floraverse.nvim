@@ -65,10 +65,10 @@ git:
 git_repo:
   branch_main: { foreground: "#7d7868" }
   branch_other: { foreground: "#478a77" }
-  git_clean: { foreground: "#ebebef" }
+  git_clean: { foreground: "#f0f0f3" }
   git_dirty: { foreground: "#ab4b8e" }
 
-punctuation: { foreground: "#ebebef" }
+punctuation: { foreground: "#f0f0f3" }
 date: { foreground: "#9a7141" }
 inode: { foreground: "#7d7868" }
 blocks: { foreground: "#7d7868" }
