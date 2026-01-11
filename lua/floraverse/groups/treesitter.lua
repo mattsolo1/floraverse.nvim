@@ -46,6 +46,15 @@ function M.get(c, opts)
     ["@variable"]          = { fg = c.fg, style = opts.styles.variables },
     ["@variable.builtin"]  = { fg = c.red, italic = true },
     ["@variable.parameter"] = { fg = c.yellow, italic = true },
+
+    -- LSP Semantic Tokens
+    ["@lsp.type.function"] = "@function",
+    ["@lsp.type.method"]   = "@function",
+    ["@lsp.type.keyword"]  = "@keyword",
+    ["@lsp.type.type"]     = "@type",
+    ["@lsp.type.parameter"] = "@variable.parameter",
+    ["@lsp.type.variable"] = "@variable",
+    ["@lsp.type.property"] = "@property",
   }
 end
 
